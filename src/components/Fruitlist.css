@@ -1,0 +1,128 @@
+
+
+/* Fruit List */
+.fruit-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.fruit-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.fruit-item .fruit-details {
+    flex-grow: 1;
+}
+
+.fruit-item button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fruit-item button:hover {
+    background-color: #45a049;
+}
+
+/* Overlay Styles */
+
+/* Overlay Content Box */
+.overlay-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border-color: #333;
+    width: 80%;
+    padding: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.overlay-content-h2{
+    color: #c0392b;
+}
+
+
+.overlay-content .total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.overlay-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+
+.Proccednext{
+    background: linear-gradient(to bottom, #a823ad, #f270f7);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1)
+}
+
+
+.back-button {
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px #0000001a
+}
+.order-id {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+

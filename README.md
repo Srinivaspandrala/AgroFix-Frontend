@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+In the Fruitlist component, a collection of fruit items is stored as an array. Each fruit object in this array contains properties such as id, name, imgurl, and price. The fruit items are then mapped over using JavaScript’s map() function to display each fruit in the component. For each fruit, the FruitItem component is rendered, receiving the following props: fruit, onAddFruit, and onRemoveFruit.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Managing the Cart in Fruitlist
+The handleAddFruit function is used to manage the items in the cart. It updates the addedFruit state by adding or incrementing the quantity of the selected fruit. To ensure the state is updated properly, React treats the state as immutable, which means we can't directly modify the state array. Instead, we create a temporary variable called updatedFruits, where we check if the fruit is already in the cart using its id. If the fruit exists, we simply increment its quantity and update its total price accordingly. If the fruit is not already in the cart, we add it with a quantity of 1 and calculate the total price. The updated list of fruits is then stored in the addedFruit state using the setAddedFruit setter function.
 
-## Available Scripts
+Similarly, the handleRemoveFruit function allows us to remove a fruit from the cart. It works in a similar way to handleAddFruit, but instead of incrementing the quantity, it decrements it. If the quantity reaches 1, the item is removed from the cart.
 
-In the project directory, you can run:
+The Cart Component
+The Cart component receives several props from the Fruitlist component: addedFruit, totalPrice, and handleRemoveFruit. These props are used to display the fruit items in the cart, show the total price, and allow the user to remove an item from the cart. The addedFruit prop contains the list of fruits added to the cart, along with the quantity and total price for each item. The handleRemoveFruit function is passed as a prop, so it can be used within the Cart component to remove items when necessary.
 
-### `npm start`
+Order Tracking and Payment
+Once the user is ready to proceed with the order, they can click the "Buy Now" button, which reveals a payment section. The handleSubmit function is triggered when the user submits the payment form. It generates a random tracking ID for the order, sends the payment details to the backend via a POST request, and alerts the user about the successful booking.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

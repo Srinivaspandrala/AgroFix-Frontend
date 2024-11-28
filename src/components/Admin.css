@@ -1,0 +1,48 @@
+.admin-panel {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #c0492f;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-table th, .orders-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.orders-table th {
+    color: black;
+    background:linear-gradient(to bottom,#b0ffff,#ffffff);
+}
+
+.status-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border:solid 1px   red;
+}
+
+
+
+.status-btn.disabled {
+    background-color: #ffffff;
+    color: black;
+    border:solid 1px #007c0a;
+    cursor: not-allowed;
+    box-shadow: black;
+}
+
+.error {
+    color: red;
+}
